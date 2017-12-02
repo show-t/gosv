@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/show-t/gosvr/controllers"
+	"github.com/show-t/gosvr/controller"
 
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
@@ -23,13 +23,13 @@ func main() {
 	e.Static("/public/img/", "./public/img/")
 
 	// ルーティング設定
-	e.GET("/", controllers.HandleIndexView)
+	e.GET("/", controller.HandleIndexView)
 
 	u := e.Group("/user")
-	u.GET("/signin", controllers.HandleSigninView)
-	u.POST("/signin", controllers.HandleSignin)
-	u.GET("/signup", controllers.HandleSignupView)
-	u.POST("/signup", controllers.HandleSignup)
+	u.GET("/signin", controller.HandleSigninView)
+	u.POST("/signin", controller.HandleSignin)
+	u.GET("/signup", controller.HandleSignupView)
+	u.POST("/signup", controller.HandleSignup)
 
 	// サーバー起動
 	e.Logger.Fatal(e.Start(":3000"))
