@@ -4,14 +4,14 @@ import (
 	"github.com/labstack/echo"
 )
 
-func HandleIndexView(c echo.Context) (err error) {
+func IndexViewController(c echo.Context) (err error) {
 	return
 }
 
-func HandleSigninView(c echo.Context) (err error) {
+func SigninViewController(c echo.Context) (err error) {
 	return
 }
 
-func HandleSignupView(c echo.Context) (err error) {
+func SignupViewController(c echo.Context) (err error) {
 	return
 }
